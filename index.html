@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <style class="keyframes">
+    </style>
+    <style>
+
+      .page {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        justify-content: center;
+      }
+
+      img {
+        height: auto;
+        animation-duration: 3s;
+        animation-name: rotateAndScaleIn;
+        animation-timing-function: ease-in-out;
+        transform: scale(0);
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <img class="the-image"  src="./oof.png" />
+    </div>
+  </body>
+
+  <script>
+    const images = [
+      'oof.png',
+      'why.png',
+      'sure.png',
+      'hmm.png',
+    ];
+
+    const randomIndex = Math.floor(images.length * Math.random());
+
+    const randomImage = images[randomIndex];
+
+    const theImageElement = document.querySelector('.the-image');
+
+    theImageElement.src = `./${randomImage}`;
+    document.querySelector('.keyframes').innerHTML = `
+      @keyframes rotateAndScaleIn {
+
+        0%, 100% {
+          transform: scale(0) rotate(0deg);
+        }
+        50% {
+          transform: scale(3) rotate(${360 * (Math.floor(Math.random() * 4) + 2)}deg);
+        }
+      }
+    `
+  </script>
+</html>
