@@ -1,8 +1,13 @@
 <html>
   <head>
-    <style class="keyframes">
-    </style>
+    <style class="keyframes"></style>
     <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+      }
 
       .page {
         height: 100vh;
@@ -21,46 +26,45 @@
         animation-timing-function: ease-in-out;
         transform: scale(0);
       }
-
-
-
     </style>
   </head>
   <body>
     <div class="page">
-      <img class="the-image"  src="./oof.png" />
+      <img class="the-image" src="./oof.png" />
     </div>
   </body>
 
   <script>
     const images = [
-      'oof.png',
-      'why.png',
-      'sure.png',
-      'hmm.png',
-      'ugh.png',
-      'thumbs-up.png',
-      'wave.png',
-      'pogchamp.png',
+      "oof.png",
+      "why.png",
+      "sure.png",
+      "hmm.png",
+      "ugh.png",
+      "thumbs-up.png",
+      "wave.png",
+      "pogchamp.png"
     ];
 
     const randomIndex = Math.floor(images.length * Math.random());
 
     const randomImage = images[randomIndex];
 
-    const theImageElement = document.querySelector('.the-image');
+    const theImageElement = document.querySelector(".the-image");
 
     theImageElement.src = `./${randomImage}`;
-    document.querySelector('.keyframes').innerHTML = `
+    document.querySelector(".keyframes").innerHTML = `
       @keyframes rotateAndScaleIn {
 
         0%, 100% {
           transform: scale(0) rotate(0deg);
         }
         50% {
-          transform: scale(3) rotate(${360 * (Math.floor(Math.random() * 4) + 2)}deg);
+          transform: scale(3) rotate(${360 *
+            (Math.floor(Math.random() * 4) + 2)}deg);
         }
       }
-    `
+    `;
   </script>
+  <audio controls="false" src="./t-rex-roar.mp3"></audio>
 </html>
