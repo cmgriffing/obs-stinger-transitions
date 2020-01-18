@@ -32,7 +32,9 @@
     <div class="page">
       <img class="the-image" src="./oof.png" />
     </div>
-    <div class="audio-wrapper"></div>
+    <div class="audio-wrapper">
+      <audio controls="false"></audio>
+    </div>
   </body>
 
   <script>
@@ -75,10 +77,11 @@
       "tarzan.mp3"
     ];
 
-    const randomAudioIndex = Math.floor(images.length * Math.random());
+    const randomAudioIndex = Math.floor(audio.length * Math.random());
+    console.log({ randomAudioIndex });
 
-    document.querySelector(
-      ".audio-wrapper"
-    ).innerHTML = `<audio controls="false" autoplay="true" src="./mp3s/${audio[randomAudioIndex]}"></audio>`;
+    const audioElement = document.querySelector(".audio-wrapper audio");
+    audioElement.src = `./mp3s/${audio[randomAudioIndex]}`;
+    audioElement.autoplay = true;
   </script>
 </html>
