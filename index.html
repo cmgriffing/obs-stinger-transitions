@@ -32,6 +32,7 @@
     <div class="page">
       <img class="the-image" src="./oof.png" />
     </div>
+    <div class="audio-wrapper"></div>
   </body>
 
   <script>
@@ -65,6 +66,19 @@
         }
       }
     `;
+
+    const audio = [
+      "batman.mp3",
+      "hee-hee.mp3",
+      "howie-scream.mp3",
+      "seinfeld.mp3",
+      "tarzan.mp3"
+    ];
+
+    const randomAudioIndex = Math.floor(images.length * Math.random());
+
+    document.querySelector(
+      ".audio-wrapper"
+    ).innerHTML = `<audio controls="false" autoplay="true" src="./mp3s/${audio[randomAudioIndex]}"></audio>`;
   </script>
-  <audio controls="false" autoplay="true" src="./t-rex-roar.mp3"></audio>
 </html>
