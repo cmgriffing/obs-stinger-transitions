@@ -51,7 +51,7 @@
 
     const audioElement = document.querySelector(".audio-wrapper audio");
     audioElement.src = `./mp3s/${audio[randomAudioIndex]}`;
-    audioElement.play();
+    audioElement.autoplay = true;
 
     const images = [
       "oof.png",
