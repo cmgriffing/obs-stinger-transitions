@@ -38,6 +38,21 @@
   </body>
 
   <script>
+    const audio = [
+      "batman.mp3",
+      "hee-hee.mp3",
+      "howie-scream.mp3",
+      "seinfeld.mp3",
+      "tarzan.mp3"
+    ];
+
+    const randomAudioIndex = Math.floor(audio.length * Math.random());
+    console.log({ randomAudioIndex });
+
+    const audioElement = document.querySelector(".audio-wrapper audio");
+    audioElement.src = `./mp3s/${audio[randomAudioIndex]}`;
+    audioElement.play();
+
     const images = [
       "oof.png",
       "why.png",
@@ -68,20 +83,5 @@
         }
       }
     `;
-
-    const audio = [
-      "batman.mp3",
-      "hee-hee.mp3",
-      "howie-scream.mp3",
-      "seinfeld.mp3",
-      "tarzan.mp3"
-    ];
-
-    const randomAudioIndex = Math.floor(audio.length * Math.random());
-    console.log({ randomAudioIndex });
-
-    const audioElement = document.querySelector(".audio-wrapper audio");
-    audioElement.src = `./mp3s/${audio[randomAudioIndex]}`;
-    audioElement.autoplay = true;
   </script>
 </html>
