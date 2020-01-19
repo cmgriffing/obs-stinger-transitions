@@ -39,7 +39,17 @@
 
   <script>
     const audio = [
+      "badumtss.mp3",
+      "chewbacca.mp3",
+      "dun_dun.mp3",
+      "law-and-order.mp3",
+      "lightsaber.mp3",
+      "pornhub-community-intro.mp3",
+      "sadtrombone.mp3",
+      "victoryff.mp3",
       "batman.mp3",
+      "the-price-is-right-losing-horn.mp3",
+      "windows-shutdown.mp3",
       "hee-hee.mp3",
       "howie-scream.mp3",
       "seinfeld.mp3",
@@ -47,7 +57,6 @@
     ];
 
     const randomAudioIndex = Math.floor(audio.length * Math.random());
-    console.log({ randomAudioIndex });
 
     const audioElement = document.querySelector(".audio-wrapper audio");
     audioElement.src = `./mp3s/${audio[randomAudioIndex]}`;
