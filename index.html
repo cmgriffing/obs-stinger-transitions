@@ -39,6 +39,7 @@
 
   <script>
     const audio = [
+      "56kmodem.mp3",
       "badumtss.mp3",
       "chewbacca.mp3",
       "dun_dun.mp3",
@@ -57,7 +58,7 @@
     const randomAudioIndex = Math.floor(audio.length * Math.random());
 
     const audioElement = document.querySelector(".audio-wrapper audio");
-    audioElement.src = `./mp3s/${audio[randomAudioIndex]}`;
+    audioElement.src = `./mp3s/normalized/${audio[randomAudioIndex]}`;
     audioElement.autoplay = true;
 
     const images = [
